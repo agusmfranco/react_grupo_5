@@ -9,7 +9,7 @@ class ContentRowTop extends Component{
         this.state = {
             userCount: [],
             productCount: [],
-            total: []            
+            last_price: []            
         }
     }
 
@@ -28,7 +28,7 @@ componentDidMount(){
         })
         .then(response => {
             this.setState({productCount: response.meta.count})
-            
+            this.setState({last_price: response.data[response.data.length - 1]})            
         })
         .catch(error => console.log(error))
     }
@@ -45,15 +45,15 @@ componentDidMount(){
         
         let amount = {
             color:  "success",
-            titulo: "Cantidad $ en productos",
-            valor: 0,
+            titulo: "Valor del libro agregado más recientemente",
+            valor: this.state.last_price.price,
             icono: "fa-dollar-sign",
             moneda: true
         };
         
         let users = {
             color:  "warning",
-            titulo: "Cantidad de usuarios",
+            titulo: "Cantidad de usuarios registrados",
             valor: this.state.userCount,
             icono: "fa-user-check",
             moneda: false
