@@ -52,6 +52,7 @@ class Product extends Component{
                                 <th>Id</th>
                                 <th>Titulo</th>
                                 <th>Sinopsis</th>
+                                <th>Precio</th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -59,6 +60,7 @@ class Product extends Component{
                                 <th>Id</th>
                                 <th>Titulo</th>
                                 <th>Sinopsis</th>
+                                <th>Precio</th>
                             </tr>
                         </tfoot>
                         <tbody>

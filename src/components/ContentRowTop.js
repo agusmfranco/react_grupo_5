@@ -8,8 +8,7 @@ class ContentRowTop extends Component{
         super()
         this.state = {
             userCount: [],
-            productCount: [],
-            last_price: []            
+            productCount: []            
         }
     }
 
@@ -27,8 +26,7 @@ componentDidMount(){
             return response.json()
         })
         .then(response => {
-            this.setState({productCount: response.meta.count})
-            this.setState({last_price: response.data[response.data.length - 1]})            
+            this.setState({productCount: response.meta.count})           
         })
         .catch(error => console.log(error))
     }
@@ -45,8 +43,8 @@ componentDidMount(){
         
         let amount = {
             color:  "success",
-            titulo: "Valor del libro agregado más recientemente",
-            valor: this.state.last_price.price,
+            titulo: "Total $ en productos",
+            valor: 15190,
             icono: "fa-dollar-sign",
             moneda: true
         };

@@ -2,10 +2,10 @@ import React from 'react';
 import Category from './Category';
 
 let categorias = [
-    {categoria: 'Novela'},
-    {categoria: 'Ciencia Ficción'},
-    {categoria: 'Poesía'},
-    {categoria: 'Juvenil'}
+    {categoria: 'Novela:    7'},
+    {categoria: 'Ciencia Ficción:   5'},
+    {categoria: 'Poesía:    3'},
+    {categoria: 'Juvenil:   1'}
 ]
 
 function CategoryInDB(){
